@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- daisy ui cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main class="flex justify-center items-center h-screen">
+      <div class="mockup-phone h-[700px] border-4 border-red-600 bg-white">
+        <div class="mockup-phone-camera"></div>
+        <div
+          class="mockup-phone-display text-white grid place-content-center items-center border-blue-600 border-4"
+        >
+          <!-- available balance -->
+          <div class="stats shadow">
+            <div class="stat bg-gray-500">
+              <div class="stat-value total" id="ac-balance">9,400</div>
+              <div class="stat-desc">available balance</div>
+            </div>
+          </div>
+          <div class="divider w-full"></div>
+          <br />
+          <!-- add money and cash out button added -->
+          <div class="btns inline-block">
+            <button class="btn bg-black text-white" id="show-addM-button">
+              add money
+            </button>
+            <button class="btn bg-black text-white" id="show-cashout-btn">
+              cashout
+            </button>
+            <button class="btn bg-black text-white" id="show-tran-b">
+              transactions
+            </button>
+          </div>
+          <div class="divider w-full"></div>
+
+          <!-- add money form start -->
+          <form action="" id="add-money-form" class="hidden">
+            <fieldset
+              class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box"
+            >
+              <label class="fieldset-label">amount</label>
+              <input
+                type="text"
+                class="input amnt text-black"
+                placeholder="amount to add"
+              />
+              <label class="fieldset-label">pin</label>
+              <input
+                type="password"
+                class="input text-black"
+                placeholder="pin"
+                id="pin"
+              />
+
+              <button class="btn btn-neutral mt-4" id="am-btn">
+                add money
+              </button>
+            </fieldset>
+          </form>
+          <!-- add money form end -->
+
+          <!-- cash out form start -->
+          <form action="" class="" id="cash-out-form">
+            <fieldset
+              class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box"
+            >
+              <label class="fieldset-label">amount to cashOut</label>
+              <input
+                type="text"
+                class="input amnt text-black"
+                placeholder="amount to cashout"
+              />
+              <label class="fieldset-label">pin</label>
+              <input
+                type="password"
+                class="input text-black"
+                placeholder="pin"
+                id="cpin"
+              />
+
+              <button class="btn btn-neutral mt-4" id="btn">cash out</button>
+            </fieldset>
+          </form>
+          <!-- cash out form end -->
+
+          <div class="text-black text-center" id="transaction-section">
+            <h2>transcatins here</h2>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./jsFiles/utilities.js"></script>
+    <script src="./jsFiles/addMoney.js"></script>
+    <script src="./jsFiles/cashout.js"></script>
+    <script src="./jsFiles/features.js"></script>
+  </body>
+</html>
